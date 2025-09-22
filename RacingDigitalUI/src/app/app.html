@@ -1,0 +1,16 @@
+<section class="flex flex-col h-full w-full justify-center items-center">
+  <app-hero />
+
+  <app-results-grid
+    [raceResults]="raceResults()"
+    [racesLoading]="racesLoading()"
+    [racesLoaded]="racesLoaded()"
+    (resultSelected)="resultSelected($event)"
+  />
+
+  <app-results-panel
+    [selectedResult]="selectedResult"
+    (closePanel)="resultDeselected()"
+    (updateResultNote)="updateResultNote($event)"
+  />
+</section>

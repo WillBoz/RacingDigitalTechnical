@@ -1,0 +1,61 @@
+<p-drawer
+  header="Race Results"
+  [style]="{ width: '600px' }"
+  [visible]="showPanel()"
+  (onHide)="hidePanel()"
+>
+  <ng-container *ngIf="selectedResult() as result">
+    <div class="flex flex-col">
+      <span>
+        <p class="text-lg font-bold">Race:</p>
+        <p class="pl-4">{{ result.race }}</p>
+      </span>
+
+      <span class="mt-4">
+        <p class="text-lg font-bold">Race Date:</p>
+        <p class="pl-4">{{ result.raceDate }}</p>
+      </span>
+
+      <span class="mt-4">
+        <p class="text-lg font-bold">Race Course:</p>
+        <p class="pl-4">{{ result.racecourse }}</p>
+      </span>
+
+      <span class="mt-4">
+        <p class="text-lg font-bold">Race Distance:</p>
+        <p class="pl-4">{{ result.raceDistance }}</p>
+      </span>
+
+      <span class="mt-4">
+        <p class="text-lg font-bold">Jockey:</p>
+        <p class="pl-4">{{ result.jockey }}</p>
+      </span>
+
+      <span class="mt-4">
+        <p class="text-lg font-bold">Horse:</p>
+        <p class="pl-4">{{ result.horse }}</p>
+      </span>
+
+      <span class="mt-4">
+        <p class="text-lg font-bold">Trainer:</p>
+        <p class="pl-4">{{ result.trainer }}</p>
+      </span>
+
+      <span class="mt-4">
+        <p class="text-lg font-bold">Position:</p>
+        <p class="pl-4">{{ result.finishingPosition }}</p>
+      </span>
+
+      <span class="mt-4">
+        <p class="text-lg font-bold">Notes:</p>
+        <textarea
+          rows="5"
+          cols="65"
+          pTextarea
+          [ngModel]="selectedResult()?.notes"
+          (input)="editResultNote($event)"
+        ></textarea>
+      </span>
+    </div>
+  </ng-container>
+</p-drawer>
