@@ -29,7 +29,7 @@
 <h3 align="center">How The Application Works</h3>
 
 - The application uses **Angular** with its component-based architecture to render the user interface.
-- **Tailwind CSS** is used for styling, providing a lean way and managing styles for the components.
+- **Tailwind CSS** is used for styling, providing a lean way of managing styles for the components.
 - **PrimeNG** is the UI library used to handle the grid and side panel componentry in the app.
 - **NgRx** is used for state management to manage data flow between the store and Angular components.
 - **.NET 8 Web API** serves as the backend, exposing endpoints and handling data that the Angular frontend consumes over HTTP.
